@@ -1,0 +1,15 @@
+D:\QA_Automation\Backend\Summator\Summator\bin\Debug\net6.0\Summator.exe
+D:\QA_Automation\Backend\Summator\Summator\bin\Debug\net6.0\Summator.deps.json
+D:\QA_Automation\Backend\Summator\Summator\bin\Debug\net6.0\Summator.runtimeconfig.json
+D:\QA_Automation\Backend\Summator\Summator\bin\Debug\net6.0\Summator.dll
+D:\QA_Automation\Backend\Summator\Summator\bin\Debug\net6.0\Summator.pdb
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.csproj.AssemblyReference.cache
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.GeneratedMSBuildEditorConfig.editorconfig
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.AssemblyInfoInputs.cache
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.AssemblyInfo.cs
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.csproj.CoreCompileInputs.cache
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.dll
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\refint\Summator.dll
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.pdb
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\Summator.genruntimeconfig.cache
+D:\QA_Automation\Backend\Summator\Summator\obj\Debug\net6.0\ref\Summator.dll
