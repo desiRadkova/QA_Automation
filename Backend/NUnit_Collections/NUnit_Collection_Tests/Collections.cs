@@ -4,9 +4,15 @@ namespace NUnit_Collection_Tests
 {
     public class Collections
     {
+        int i = 0;
+
+
         [SetUp]
-        public void Setup()
+        public void StartCallMethods()
         {
+            i = i + 1;
+
+            Console.WriteLine("Test call: " + i);
         }
 
         [Test]
@@ -69,7 +75,7 @@ namespace NUnit_Collection_Tests
         }
 
         [Test]
-        public void Test_Colection_InsertAt()
+        public void Test_Collection_InsertAt()
         {
             var collection = new Collection<int>(4, 8, 6);
             collection.InsertAt(1,5);
@@ -119,7 +125,7 @@ namespace NUnit_Collection_Tests
         }
 
         [Test]
-        public void Test_Colections_GetByInvaldIndex()
+        public void Test_Collections_GetByInvaldIndex()
         {
             var collection = new Collection<int>(7, 6);
             
