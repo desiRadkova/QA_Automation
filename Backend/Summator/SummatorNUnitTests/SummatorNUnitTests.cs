@@ -4,8 +4,19 @@ namespace Summator.SummatorNUnitTests
 {
     public class SummatorNUitTests
     {
+
         public class SummaryTests
+        {        
+            int i = 0;
+        
+
+        [SetUp]
+        public void StartCallMethods()
         {
+            i = i + 1;
+
+            Console.WriteLine("Test call Summary Tests: " + i);
+        }
             [Test]
             public void Test1_Sum_TwoPositiveNumbers()
             {
@@ -49,6 +60,17 @@ namespace Summator.SummatorNUnitTests
         }
         public class Average
         {
+            int i = 0;
+
+
+            [SetUp]
+            public void StartCallMethods()
+            {
+                i = i + 1;
+
+                Console.WriteLine("Test call Average Tests: " + i);
+            }
+
             [Test]
             public void Test6_Avg_Number()
             {
@@ -60,6 +82,17 @@ namespace Summator.SummatorNUnitTests
         }
        public class Multiply
         {
+            int i = 0;
+
+
+            [SetUp]
+            public void StartCallMethods()
+            {
+                i = i + 1;
+
+                Console.WriteLine("Test call Multiply Tests: " + i);
+            }
+
             [Test]
             public void Test7_Multiply_Number()
             {
@@ -95,6 +128,17 @@ namespace Summator.SummatorNUnitTests
         }
        public class Division
         {
+            int i = 0;
+
+
+            [SetUp]
+            public void StartCallMethods()
+            {
+                i = i + 1;
+
+                Console.WriteLine("Test call Division Tests: " + i);
+            }
+
             [Test]
             public void Test11_Division_TwoNumbers()
             {
@@ -132,6 +176,17 @@ namespace Summator.SummatorNUnitTests
         }
         public class DivisionWithReminder
         {
+            int i = 0;
+
+
+            [SetUp]
+            public void StartCallMethods()
+            {
+                i = i + 1;
+
+                Console.WriteLine("Test call Division With Reminder Tests: " + i);
+            }
+
             [Test]
             public void Test15_DivisionWithRemander_TwoNumbers()
             {
@@ -149,6 +204,47 @@ namespace Summator.SummatorNUnitTests
                 Assert.AreEqual(expected, actual);
             }
         }
-        
+        [TestCase(new int[] { 10, 15},25)]
+        [TestCase(new int[] { -10, -15 }, -25)]
+        [TestCase(new int[] { 10, 0 }, 10)]
+        [TestCase(new int[] { 2000000000, 2000000000, 2000000000, 2000000000 }, 8000000000)]
+        [TestCase(new int[] { }, 0)]
+        public void TestSuitSum(int[] values,long expected)
+        {
+            var actual = Summator.Sum(values);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[] { 3, 7, 2 },4)]
+        [TestCase(new int[] { -3, -7, -2 }, -4)]
+        public void TestSuitAvarage(int[] values, double expected)
+        {
+            var actual = Summator.Average(values);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[] {25,2 },12.5)]
+        [TestCase(new int[] { -25,2},-12.5)]
+        public void TestSuitDivision(int[] value, double expected)
+        {
+            var actual = Summator.Division(value);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(new int[] { 25, 8}, 200)]
+        [TestCase(new int[] { -65, 0}, 0)]
+        [TestCase(new int[] { -98,-34},3332)]
+        [TestCase(new int[] { 20, -6}, -120)]
+        public void TestSuitMultiply(int[] value, int expected)
+        {
+            var actual = Summator.Multiply(value);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(new int[] { 85,4},1)]
+        [TestCase(new int[] { -65, -2},-1)]
+        public void TestSuitDivisionWithRemander(int[] value, int expected)
+        {
+            var actual = Summator.DivisionWithRemander(value); 
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
