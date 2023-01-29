@@ -131,6 +131,13 @@ namespace NUnit_Collection_Tests
             
             Assert.That(() => { var actual = collection[3];}, Throws.InstanceOf<ArgumentOutOfRangeException>());
         }
+        [Test]
+        public void Test_Collections_GetByInvaldNegativeIndex()
+        {
+            var collection = new Collection<int>(7, 6);
+
+            Assert.That(() => { var actual = collection[-3]; }, Throws.InstanceOf<ArgumentOutOfRangeException>());
+        }
 
         [Test]
         public void Test_Collections_SetByIndex()
