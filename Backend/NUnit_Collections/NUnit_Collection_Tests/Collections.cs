@@ -18,15 +18,15 @@ namespace NUnit_Collection_Tests
         [Test]
         public void Test_Collection_EmptyCollection()
         {
-            var collection = new Collection <int>();
-           
+            var collection = new Collection<int>();
+
             var actual = collection.ToString();
             var expected = "[]";
             Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void Test_Collection_Add() 
+        public void Test_Collection_Add()
         {
             var collection = new Collection<int>(21, 5, 8);
             collection.Add(1);
@@ -61,14 +61,14 @@ namespace NUnit_Collection_Tests
             var expected = "2";
             Assert.AreEqual(expected, actual);
             Assert.That(collection.Capacity, Is.GreaterThan(collection.Count));
-            
+
         }
 
         [Test]
         public void Test_Collection_AddRange()
         {
             var collection = new Collection<int>(58, 6);
-            collection.AddRange(0,5);
+            collection.AddRange(0, 5);
             var actual = collection.ToString();
             var expected = "[58, 6, 0, 5]";
             Assert.AreEqual(expected, actual);
@@ -78,7 +78,7 @@ namespace NUnit_Collection_Tests
         public void Test_Collection_InsertAt()
         {
             var collection = new Collection<int>(4, 8, 6);
-            collection.InsertAt(1,5);
+            collection.InsertAt(1, 5);
             var actual = collection.ToString();
             var expected = "[4, 5, 8, 6]";
             Assert.AreEqual(expected, actual);
@@ -98,9 +98,9 @@ namespace NUnit_Collection_Tests
         public void Test_Collection_GrowCapacity()
         {
             var collection = new Collection<int>(1, 2, 3, 54, 6, 5, 8, 2, 10, 15, 65, 85, 47, 14, 19, 16);
-                for (int i = 1; i <= 20; i++)
+            for (int i = 1; i <= 20; i++)
                 collection.Add(i);
-                var actual = collection.ToString();
+            var actual = collection.ToString();
             var expected = "[1, 2, 3, 54, 6, 5, 8, 2, 10, 15, 65, 85, 47, 14, 19, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]";
             Assert.AreEqual(expected, actual);
         }
@@ -116,6 +116,15 @@ namespace NUnit_Collection_Tests
         }
 
         [Test]
+        public void Test_Collection_RemoveInvalidIndex()
+        {
+            var collection = new Collection<string>("Apple", "Pear", "Pineapple");
+
+
+            Assert.That(() => { var actual = collection[-3]; }, Throws.InstanceOf<ArgumentOutOfRangeException>());
+        }
+
+        [Test]
         public void Test_Collection_GetByIndex()
         {
             var collection = new Collection<int>(4, 5, 6, 8);
@@ -125,11 +134,20 @@ namespace NUnit_Collection_Tests
         }
 
         [Test]
+        public void Test_Collection_GetByIndexString()
+        {
+            var collection = new Collection<string>("Green", "Blue", "White");
+            var actual = collection[2].ToString();
+            var expected = "White";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
         public void Test_Collections_GetByInvaldIndex()
         {
             var collection = new Collection<int>(7, 6);
-            
-            Assert.That(() => { var actual = collection[3];}, Throws.InstanceOf<ArgumentOutOfRangeException>());
+
+            Assert.That(() => { var actual = collection[3]; }, Throws.InstanceOf<ArgumentOutOfRangeException>());
         }
         [Test]
         public void Test_Collections_GetByInvaldNegativeIndex()
@@ -160,6 +178,7 @@ namespace NUnit_Collection_Tests
             var expected = "[]";
             Assert.AreEqual(expected, actual);
         }
+
 
     }
 }
