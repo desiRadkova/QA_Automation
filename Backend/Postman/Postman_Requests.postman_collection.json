@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "118dc775-6829-4cc8-a01b-356df648a806",
+		"name": "Postman_Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25740101"
+	},
+	"item": [
+		{
+			"name": "GET Requests for Counties",
+			"item": [
+				{
+					"name": "GET information about Bulgaria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v2/name/Bulgaria/",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v2",
+								"name",
+								"Bulgaria",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET German speakers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/lang/german",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"lang",
+								"german"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Countries in EU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/region/europe",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"region",
+								"europe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GIT Requests",
+			"item": [
+				{
+					"name": "Issues",
+					"item": [
+						{
+							"name": "POST Issue Requests",
+							"item": [
+								{
+									"name": "POST Createing Second Issue",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "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",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "desiRadkova",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Createing Second Issue\"\r\n}"
+										},
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation/issues",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation",
+												"issues"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST Adding Description",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Is there a description\", function () {\r",
+													"    const body = pm.response.json();\r",
+													"    pm.expect(body.body,\"Adding some text...\");\r",
+													"    //pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "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",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "desiRadkova",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"body\": \"Adding some text...\"\r\n}"
+										},
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation/issues/5",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation",
+												"issues",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GET Issue Requests",
+							"item": [
+								{
+									"name": "GET All Issues",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"GET All Issues in Array\", function () {\r",
+													"    const body = pm.response.json();\r",
+													"    console.log(\"Body\",body);\r",
+													"    pm.expect(Array.isArray(body))\r",
+													"\r",
+													"    for(let item of  body)\r",
+													"    {\r",
+													"        pm.expect(typeof(item.title)).equals(\"string\");\r",
+													"        pm.expect(typeof(item.id)).equals(\"number\");\r",
+													"        pm.expect(typeof(item.number)).equals(\"number\");\r",
+													"        pm.expect((item.repository_url)).equals(\"https://api.github.com/repos/desiRadkova/QA_Automation\");\r",
+													"        pm.expect((item.user.login)).equals(\"desiRadkova\");\r",
+													"        pm.expect((item.user.type)).equals(\"User\");\r",
+													"        pm.expect((item.user.site_admin)).equals(false);\r",
+													"    }\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation/issues",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation",
+												"issues"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET One Issue",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation/issues/4",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation",
+												"issues",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET All Labels of Issue",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"pm.test(\"Status is OK\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation/issues/4/labels",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation",
+												"issues",
+												"4",
+												"labels"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Repos",
+					"item": [
+						{
+							"name": "GET Repo Requests",
+							"item": [
+								{
+									"name": "GET All Public Repos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.github.com/users/desiRadkova/repos",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"users",
+												"desiRadkova",
+												"repos"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET One Public Repo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Name is QA_Automation\", function () {\r",
+													"    const body = pm.response.json();\r",
+													"    pm.expect(body.name, \"QA_Automation\");\r",
+													"    pm.expect(body.private, false);\r",
+													"\r",
+													"});\r",
+													"pm.test(\"Repo details \", function(){\r",
+													"    const body = pm.response.json();\r",
+													"    pm.expect(body.full_name, \"desiRadkova/QA_Automation\");\r",
+													"    pm.expect(body.private, false);\r",
+													"    pm.expect(body.id, 591644873);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET All Commits of Repo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.github.com/repos/desiRadkova/QA_Automation/commits",
+											"protocol": "https",
+											"host": [
+												"api",
+												"github",
+												"com"
+											],
+											"path": [
+												"repos",
+												"desiRadkova",
+												"QA_Automation",
+												"commits"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
