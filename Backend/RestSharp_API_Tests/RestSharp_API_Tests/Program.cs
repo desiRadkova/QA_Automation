@@ -41,7 +41,7 @@ namespace RestSharp_API_Tests
                 var labels = JsonSerializer.Deserialize<List<Label>>(responsed.Content);
                 i++;
                 Console.WriteLine("\n--------------------------------------------------------");
-                Console.WriteLine("Issue title "+ i +": " + issueData.title);
+                Console.WriteLine("Issue title " + i + ": " + issueData.title);
                 Console.WriteLine("Issue id " + i + ": " + issueData.id);
                 Console.WriteLine("Issue number " + i + ": " + issueData.number);
                 Console.WriteLine("Issue body " + i + ": " + issueData.body);
@@ -80,7 +80,7 @@ namespace RestSharp_API_Tests
             {
                 title = "Creating issue with RestSharp",
                 body = "This is the body",
-                labels = new string[] {"bug","critical" }
+                labels = new string[] { "bug", "critical" }
             };
             request.AddBody(issueBody);
             response = client.Execute(request);
