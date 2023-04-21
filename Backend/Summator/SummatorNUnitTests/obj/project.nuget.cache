@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZIoFBigKAGJvXQSNvik+e9g7S4pSATcYfEqHtKzSNYUJNb+033S/rh3tp+0h/vk+jmCiCN4EmcUIJ1A2ReKduw==",
+  "dgSpecHash": "dK7N0EviTu8tpSSLkerIf1ojEWcbs5ZI/7Je1H7xR6iQ3vwH+SKasDMqSjYAJl5R1z0270rX1lRokl9/pfi0uw==",
   "success": true,
-  "projectFilePath": "D:\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\SummatorNUnitTests.csproj",
+  "projectFilePath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\SummatorNUnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Desi_Asus\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Desi_Asus\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",

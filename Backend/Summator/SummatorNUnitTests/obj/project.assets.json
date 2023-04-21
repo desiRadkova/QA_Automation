@@ -3945,11 +3945,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\SummatorNUnitTests.csproj",
+      "projectUniqueName": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\SummatorNUnitTests.csproj",
       "projectName": "SummatorNUnitTests",
-      "projectPath": "D:\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\SummatorNUnitTests.csproj",
+      "projectPath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\SummatorNUnitTests.csproj",
       "packagesPath": "C:\\Users\\Desi_Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\obj\\",
+      "outputPath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\SummatorNUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3969,8 +3969,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj": {
-              "projectPath": "D:\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj"
+            "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj": {
+              "projectPath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj"
             }
           }
         }
