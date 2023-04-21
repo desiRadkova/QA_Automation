@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LXN6eCcazEfQHrcOLiJDmoeCc2B1XHGuwHeInBkjbg2uaIJ1gWg/xo1vvCZOFRw8atqR2eo3GioPaKKafOLphQ==",
+  "dgSpecHash": "FRXDRxJiK7TZgq94CrswR6yM3uUVRIVT/ZRcxaPW3J7z8Zqx0iR+dJlzaCLV3JJHCfpuHN7gTgGXK+Irhzz93g==",
   "success": true,
-  "projectFilePath": "D:\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj",
+  "projectFilePath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj",
+      "projectUniqueName": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj",
       "projectName": "Summator",
-      "projectPath": "D:\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj",
+      "projectPath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\Summator\\Summator.csproj",
       "packagesPath": "C:\\Users\\Desi_Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\QA_Automation\\Backend\\Summator\\Summator\\obj\\",
+      "outputPath": "D:\\QA_Automation\\QA_Automation\\Backend\\Summator\\Summator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
